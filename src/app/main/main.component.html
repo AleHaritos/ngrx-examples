@@ -1,0 +1,9 @@
+<p>{{ value$ | async }}</p>
+<button (click)="add()">+</button>
+<button (click)="reduzir()">-</button>
+
+<br>
+<input type="text" #cont style="margin-top: 10px;">
+<button (click)="definir(cont.value)">Definir</button>
+<br><br><br>
+<button routerLink="/">Home</button>
