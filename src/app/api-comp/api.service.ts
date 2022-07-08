@@ -30,8 +30,9 @@ export class ApiService {
           return this.http.get('https://jsonplaceholder.typicode.com/todos')
             .pipe(
               tap((todos: any) => {
-      
-                this.store.dispatch(setList({payload: todos}))
+                setTimeout(() => {
+                  this.store.dispatch(setList({payload: todos}))
+                }, 3000)
               }),
               map(() => success())
             )

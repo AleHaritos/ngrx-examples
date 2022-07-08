@@ -11,6 +11,7 @@ import { ApiCompComponent } from './api-comp/api-comp.component';
 import { ApiService } from './api-comp/api.service';
 import { HttpClientModule } from '@angular/common/http' 
 import { reducerToDo } from './store/api.state';
+import { ReactiveComponentModule } from '@ngrx/component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { reducerToDo } from './store/api.state';
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({ contador: mainReducer, stateToDos: reducerToDo }, {}),
-    EffectsModule.forRoot([ ApiService ])
+    EffectsModule.forRoot([ ApiService ]),
+    ReactiveComponentModule
   ],
   providers: [ ApiService ],
   bootstrap: [AppComponent]

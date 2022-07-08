@@ -1,7 +1,11 @@
-<ul>
-    <li *ngFor="let t of todos$ | async">
+<div *ngrxLet="todos$ as todos">
+    <ul *ngIf="todos.length > 0">
+    <li>opa</li>
+    <li *ngFor="let t of todos">
         {{ t.title }}
     </li>
 </ul>
+</div>
+
 
 <button routerLink="/main">Main</button>
